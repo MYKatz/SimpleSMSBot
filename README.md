@@ -30,12 +30,13 @@ Optional: if you want to use this with more than one number you will need to eit
 
 ### Configuring the program
 
-To get the program up and running you're only going to need to do 3 things:
+To get the program up and running you're only going to need to do a few things things:
 
-1. Put your Account SID into the variable accountSID
-2. Put your Auth token into the variable authToken
-3. Set variable tnum to your twilio number including country code but without spaces or brackets (eample: +18586515050)
-4. Optionally you can change errormsg to whatever message you would like to text back if someone uses improper format or a nonexistant command.
+1. Use pip to install twilio ('pip install twilio')
+2. Put your Account SID into the variable accountSID
+3. Put your Auth token into the variable authToken
+4. Set variable tnum to your twilio number including country code but without spaces or brackets (eample: +18586515050)
+5. Optionally you can change errormsg to whatever message you would like to text back if someone uses improper format or a nonexistant command.
 
 Once you're done this run main.py and send a command to your twilio number.  Do this by sending '!' followed by the command you want.  There are two commands pre-programmed into the file: 'test' and 'testparam'.  If you want to execute 'test', for example, you would send "!test" (without quotes) to your twilio number.  Commands like 'testparam' have a certain amount of arguments (1 in this example).  Arguments are easily sent in this format: "!testparam arg1 arg2 arg3".  The program finds out how many arguments each function requires, and only uses that amount.  'testparam' only needs one parameter, so in python the above command would be executed as 'testparam(arg1)'.  Likewise, if a user sends a command that is lacking the required arguments, those will be replaced by a space.  For example, the command '!testparam' would be executed as 'testparam(" ")'.
 
